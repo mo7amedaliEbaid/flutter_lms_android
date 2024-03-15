@@ -12,6 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_lms/Feature/exam/views/widgets/exam_item.dart';
 
 import '../../../Core/Network/local_Network.dart';
+import '../../Auth_Feature/presentation/views/widgets/Custom_Loading_indicator.dart';
 
 class ExamMedterm extends StatefulWidget {
   const ExamMedterm({super.key});
@@ -39,35 +40,33 @@ class _ExamMedtermState extends State<ExamMedterm> {
         backgroundColor: const Color.fromRGBO(25, 23, 44, 1),
         body: ListView(children: [
           CustomAppBar(),
-          Positioned(
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "العودة",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14.sp,
-                      fontFamily: 'wolfexx',
-                      fontWeight: FontWeight.w700,
-                      height: 0.09.h,
-                    ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  "العودة",
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14.sp,
+                    fontFamily: 'wolfexx',
+                    fontWeight: FontWeight.w700,
+                    height: 0.09.h,
                   ),
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Icon(
-                      Icons.keyboard_arrow_right_sharp,
-                      color: Color.fromRGBO(82, 63, 237, 1),
-                      size: 30.sp,
-                    ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.keyboard_arrow_right_sharp,
+                    color: Color.fromRGBO(82, 63, 237, 1),
+                    size: 30.sp,
                   ),
-                ],
-                crossAxisAlignment: CrossAxisAlignment.center,
-              ),
+                ),
+              ],
+              crossAxisAlignment: CrossAxisAlignment.center,
             ),
           ),
           Column(children: [
@@ -109,7 +108,10 @@ class _ExamMedtermState extends State<ExamMedterm> {
                   );
                 } else if (state is ExamLoading) {
                   return Center(
-                    child: CustomLodingIndicator(),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 58.0),
+                      child: CustomLoadinfIndicator(),
+                    ),
                   );
                 } else if (state is ExamLoaded) {
                   return Padding(

@@ -140,10 +140,10 @@ class Lagnaa extends StatelessWidget {
                                     children: [
                                       Row(),
                                       CustomTextLagna(
-                                        datee: "الدور :  الارضي",
+                                        datee: "الدور :  ${cubit.authModel!.committee!.first['built']}",
                                       ),
                                       CustomTextLagna(
-                                        datee: "مكان اللجنة  :  مدرج 1",
+                                        datee: "مكان اللجنة  : ${cubit.authModel!.committee!.first['place']}",
                                       ),
                                       Row(
                                         mainAxisAlignment:

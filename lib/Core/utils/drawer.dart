@@ -119,11 +119,9 @@ class _DrawerrState extends State<Drawerr> {
                                   alignment: Alignment.bottomRight,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Expanded(
-                                      child: Image.asset(
-                                        "assets/icon/LogoutIcon.png",
-                                        height: 26.h,
-                                      ),
+                                    child: Image.asset(
+                                      "assets/icon/LogoutIcon.png",
+                                      height: 26.h,
                                     ),
                                   ),
                                 ),

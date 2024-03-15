@@ -11,6 +11,7 @@ class AuthModel {
   List? seatingNumbers;
   List? markers;
   List? backwards;
+  List? committee;
   AuthModel(
       {required this.committeeNumber,
       required this.token,
@@ -22,6 +23,7 @@ class AuthModel {
       required this.specialization,
       required this.squad,
       required this.markers,
+      required this.committee,
       required this.backwards,
       required this.studyCase});
   factory AuthModel.fromJson(dynamic data) {
@@ -36,6 +38,7 @@ class AuthModel {
         f_Name: data['user']['fristName'],
         l_Name: data['user']['lastName'],
         markers:data['user']['markers'],
+        committee:data['user']['committe'],
         backwards:data['user']['backwards'],
         id: data['user']['_id']);
   }

@@ -72,7 +72,7 @@ class _SkashenState extends State<Skashen> {
               height: 66,
               child: ListView.builder(
                   reverse: true,
-                  itemCount: 7,
+                  itemCount: 6,
                   scrollDirection: Axis.horizontal,
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   itemBuilder: (context, index) {
@@ -221,10 +221,10 @@ List<Widget> Days = [
     "يوم الخميس",
     style: TextStyle(color: Colors.white, fontSize: 30),
   ),
-  Text(
+  /*Text(
     "يوم الحمعه",
     style: TextStyle(color: Colors.white, fontSize: 30),
-  ),
+  ),*/
 ];
 
 List<String> days = [
@@ -234,5 +234,5 @@ List<String> days = [
   "الثلاثاء",
   "الاربعاء",
   "الخميس",
-  "الجمعة"
+ // "الجمعة"
 ];
